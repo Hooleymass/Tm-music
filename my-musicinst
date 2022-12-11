@@ -1,0 +1,69 @@
+#DEPENDENCIES
+#ffmpeg youtube-dl atomicparsley python-pip lolcat
+
+
+echo "
+
+Let Me Setup Things For You. Just Wait Till I Am Finished
+
+"
+cd
+read -p 'PRESS ENTER TO CONTINUE or Ctrl + C to cancel'
+apt update
+apt install nala
+nala update && nala upgrade -y
+nala install python atomicparsley ffmpeg -y
+pip install --upgrade pip yt-dlp
+nala autoremove -y
+cd
+
+mkdir ~/storage/shared/MY-MUSIC
+mkdir ~/bin
+
+mkdir ~/.config
+
+touch ~/.config/youtube-dl.conf
+
+echo "-o ~/storage/shared/MY-MUSIC/%(title)s.%(ext)s" >> ~/.config/youtube-dl.conf
+
+cd
+
+cp ~/MY-MUSIC/my-* "/data/data/com.termux/files/usr/bin"
+
+cp ~/MY-MUSIC/con* "/data/data/com.termux/files/usr/bin"
+
+cp ~/MY-MUSIC/termux-url-opener ~/bin/
+
+chmod +x /data/data/com.termux/files/usr/bin/my-*
+
+chmod +x ~/bin/termux-*
+
+chmod +x /data/data/com.termux/files/usr/bin/con*
+
+cd ~/../usr/bin
+
+ln -s my-music mm
+
+ln -s my-musicupdate mmu
+
+ln -s my-musichelp mmh
+
+
+echo "
+
+"
+
+echo "ALL TASKS COMPLETED SUCCESSFULLY
+
+"
+
+echo "
+Just share the video to termx.
+
+Or type my-music or mm in termux
+
+AND LASTLY type 'my-musichelp or mmh' to see this help/usage message and type 'my-musicupdate' or 'mmu' to reinstall/update the script
+"
+echo "Just share the video to termux.
+"
+echo "HAVE A GOOD DAY"
