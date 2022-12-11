@@ -68,7 +68,7 @@ Now Commencing Download
 "
 
 
-yt-dlp -f "bestvideo[height<=${QUALITY:=1080}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s [$TAG].%(ext)s" "$URL"
+yt-dlp -f "bestvideo[height<=${QUALITY:=1080}][ext=mp4]+bestaudio[ext=m4a]/bestvideo[height<=$QUALITY]+bestaudio/best[height<=$QUALITY]/best" --add-metadata --embed-thumbnail --recode-video mp4 -o "$LOCATION/%(title)s [$TAG].%(ext)s" "$URL";;
 
 exit;;
 
